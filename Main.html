@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery 기말과제</title>
+  <!-- 제이쿼리 모바일, 제이쿼리 라이브러리 파일 -->
+  	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+  	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+    iframe {
+      margin: 0 auto;
+    }
+    #Title {
+      text-align: center;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 250px;
+    }
+    div {
+      text-align: center;
+    }
+    </style>
+</head>
+<body>
+  <div data-role="page" id="page0">
+    <div data-role="header" data-position="fixed" data-theme="b">
+		  <h1>jQuery 최종기말과제</h1>
+		  <a href="#page0" data-icon="home" data-iconpos="notext" class="ui-btn-right">Home</a>
+	  </div>
+    <div data-role="content">
+		  <img src="MainImage.jpg"><h3>내가 좋아하는 EDM 작곡가들</h3>
+		  <ul data-role="listview" data-inset="true">
+        <div><h4>♬노래를 듣고 싶은 아티스트를 선택하세요.</h4></div>
+			  <li><a href="#page1"><img src="Creo.jpg">Creo</a></li>
+			  <li><a href="#page2"><img src="Waterflame.jpg">Waterflame</a></li>
+			  <li><a href="#page3"><img src="Paragonx9.jpg">ParagonX9</a></li>
+        <li><a href="#page4"><img src="MDK.jpg">MDK</a></li>
+        <li><a href="#page5"><img src="F-777.jpg">F-777</a></li>
+		  </ul>
+	  </div>
+    <div data-role="footer" data-position="fixed" data-theme="b">
+		  <h4>1905078 박규태 모바일웹</h4>
+    </div>
+  </div>
+
+  <!--Creo-->
+  <div data-role="page" id="page1">
+	<div data-role="header" data-position="fixed" data-theme="b">
+		<a href="#" data-icon="back" data-rel="back" data-direction="reverse">Back</a>
+		<h1>Creo Songs</h1>
+		<a href="#page0" data-icon="home" data-iconpos="notext">Home</a>
+    <div data-role="navbar">
+			<ul>
+        <li><a href="#page1">Creo</a></li>
+        <li><a href="#page2">Waterflame</a></li>
+        <li><a href="#page3">ParagonX9</a></li>
+        <li><a href="#page4">MDK</a></li>
+        <li><a href="#page5">F-777</a></li>
+			</ul>
+		</div>
+	</div>
+  <div data-role="content">
+    <div><h3>내가 좋아하는 Creo 노래들</h3></div><br>
+    <ul data-role="listview">
+      <li data-role="listdivider" id="Title"><h3>Balistic Funk</h3></li>
+      <li><p align="middle"><iframe id="ytplayer" type="text/html" width="320" height="240"
+          src="https://www.youtube.com/embed/JWFnrx2NYSU"
+          frameborder="0"></iframe></p>
+
+          <div id="ytplayer"></div>
+
+      <script>
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Replace the 'ytplayer' element with an <iframe> and
+        // YouTube player after the API code downloads.
+        var player;
+        function onYouTubePlayerAPIReady() {
+          player = new YT.Player('ytplayer', {
+            height: '360',
+            width: '640',
+            videoId: 'M7lc1UVf-VE'
+          });
+        }
+      </script></li>
+      <li data-role="listdivider" id="Title"><h3>Nautilus</h3></li>
+      <li><p align="middle"><iframe id="ytplayer" type="text/html" width="320" height="240"
+          src="https://www.youtube.com/embed/6xEKE8jXyBs"
+          frameborder="0"></iframe>
+
+          <div id="ytplayer"></div></p>
+
+      <script>
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Replace the 'ytplayer' element with an <iframe> and
+        // YouTube player after the API code downloads.
+        var player;
+        function onYouTubePlayerAPIReady() {
+          player = new YT.Player('ytplayer', {
+            height: '360',
+            width: '640',
+            videoId: 'M7lc1UVf-VE'
+          });
+        }
+      </script></li>
+      <li data-role="listdivider" id="Title"><h3>Aura</h3></li>
+      <li><p align="middle"><iframe id="ytplayer" type="text/html" width="320" height="240"
+          src="https://www.youtube.com/embed/LXTrXaYMgYs"
+          frameborder="0"></iframe>
+
+          <div id="ytplayer"></div></p>
+
+      <script>
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Replace the 'ytplayer' element with an <iframe> and
+        // YouTube player after the API code downloads.
+        var player;
+        function onYouTubePlayerAPIReady() {
+          player = new YT.Player('ytplayer', {
+            height: '360',
+            width: '640',
+            videoId: 'M7lc1UVf-VE'
+          });
+        }
+      </script></li>
+    </ul>
+  </div>
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<h4>1905078 박규태 모바일웹</h4>
+  </div>
+</div>
+
+<!--Waterflame-->
+<div data-role="page" id="page2">
+  <div data-role="header" data-position="fixed" data-theme="b">
+    <a href="#" data-icon="back" data-rel="back" data-direction="reverse">Back</a>
+      <h1>Waterflame Songs</h1>
+      <a href="#page0" data-icon="home" data-iconpos="notext">Home</a>
+      <div data-role="navbar">
+  			<ul>
+          <li><a href="#page1">Creo</a></li>
+          <li><a href="#page2">Waterflame</a></li>
+          <li><a href="#page3">ParagonX9</a></li>
+          <li><a href="#page4">MDK</a></li>
+          <li><a href="#page5">F-777</a></li>
+  			</ul>
+  		</div>
+  </div>
+  <div data-role="content">
+    <div><h3>내가 좋아하는 Waterflame 노래들</h3></div><br>
+    <ul data-role="listview">
+      <li data-role="listdivider" id="Title"><h3>Glorious Morning</h3></li>
+      <li><p align="middle"><iframe id="ytplayer" type="text/html" width="320" height="240"
+          src="https://www.youtube.com/embed/7T_YtklLyyo"
+          frameborder="0"></iframe></p>
+
+          <div id="ytplayer"></div>
+
+      <script>
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Replace the 'ytplayer' element with an <iframe> and
+        // YouTube player after the API code downloads.
+        var player;
+        function onYouTubePlayerAPIReady() {
+          player = new YT.Player('ytplayer', {
+            height: '360',
+            width: '640',
+            videoId: 'M7lc1UVf-VE'
+          });
+        }
+      </script></li>
+      <li data-role="listdivider" id="Title"><h3>Hexagon Force</h3></li>
+      <li><p align="middle"><iframe id="ytplayer" type="text/html" width="320" height="240"
+          src="https://www.youtube.com/embed/afwK743PL2Y"
+          frameborder="0"></iframe>
+
+          <div id="ytplayer"></div></p>
+
+      <script>
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Replace the 'ytplayer' element with an <iframe> and
+        // YouTube player after the API code downloads.
+        var player;
+        function onYouTubePlayerAPIReady() {
+          player = new YT.Player('ytplayer', {
+            height: '360',
+            width: '640',
+            videoId: 'M7lc1UVf-VE'
+          });
+        }
+      </script></li>
+      <li data-role="listdivider" id="Title"><h3>Lightspeed</h3></li>
+      <li><p align="middle"><iframe id="ytplayer" type="text/html" width="320" height="240"
+          src="https://www.youtube.com/embed/Y15DLHaZ5tA"
+          frameborder="0"></iframe>
+
+          <div id="ytplayer"></div></p>
+
+      <script>
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Replace the 'ytplayer' element with an <iframe> and
+        // YouTube player after the API code downloads.
+        var player;
+        function onYouTubePlayerAPIReady() {
+          player = new YT.Player('ytplayer', {
+            height: '360',
+            width: '640',
+            videoId: 'M7lc1UVf-VE'
+          });
+        }
+      </script></li>
+    </ul>
+  </div>
+  <div data-role="footer" data-position="fixed" data-theme="b">
+    <h4>1905078 박규태 모바일웹</h4>
+  </div>
+</div>
+
+<!--PargonX9-->
+<div data-role="page" id="page3">
+  <div data-role="header" data-position="fixed" data-theme="b">
+    <a href="#" data-icon="back" data-rel="back" data-direction="reverse">Back</a>
+      <h1>ParagonX9 Songs</h1>
+      <a href="#page0" data-icon="home" data-iconpos="notext">Home</a>
+      <div data-role="navbar">
+  			<ul>
+          <li><a href="#page1">Creo</a></li>
+          <li><a href="#page2">Waterflame</a></li>
+          <li><a href="#page3">ParagonX9</a></li>
+          <li><a href="#page4">MDK</a></li>
+          <li><a href="#page5">F-777</a></li>
+  			</ul>
+  		</div>
+  </div>
+  <div data-role="content">
+    <div><h3>내가 좋아하는 ParagonX9 노래들</h3></div><br>
+    <ul data-role="listview">
+      <li data-role="listdivider" id="Title"><h3>Chaoz Fantasy</h3></li>
+      <li><p align="middle"><iframe id="ytplayer" type="text/html" width="320" height="240"
+          src="https://www.youtube.com/embed/pxIuZC26hXU"
+          frameborder="0"></iframe></p>
+
+          <div id="ytplayer"></div>
+
+      <script>
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Replace the 'ytplayer' element with an <iframe> and
+        // YouTube player after the API code downloads.
+        var player;
+        function onYouTubePlayerAPIReady() {
+          player = new YT.Player('ytplayer', {
+            height: '360',
+            width: '640',
+            videoId: 'M7lc1UVf-VE'
+          });
+        }
+      </script></li>
+      <li data-role="listdivider" id="Title"><h3>HyperioxX</h3></li>
+      <li><p align="middle"><iframe id="ytplayer" type="text/html" width="320" height="240"
+          src="https://www.youtube.com/embed/3pO9ueOMHJI"
+          frameborder="0"></iframe>
+
+          <div id="ytplayer"></div></p>
+
+      <script>
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Replace the 'ytplayer' element with an <iframe> and
+        // YouTube player after the API code downloads.
+        var player;
+        function onYouTubePlayerAPIReady() {
+          player = new YT.Player('ytplayer', {
+            height: '360',
+            width: '640',
+            videoId: 'M7lc1UVf-VE'
+          });
+        }
+      </script></li>
+      <li data-role="listdivider" id="Title"><h3>Infiltration</h3></li>
+      <li><p align="middle"><iframe id="ytplayer" type="text/html" width="320" height="240"
+          src="https://www.youtube.com/embed/OUrV3OHd6-c"
+          frameborder="0"></iframe>
+
+          <div id="ytplayer"></div></p>
+
+      <script>
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Replace the 'ytplayer' element with an <iframe> and
+        // YouTube player after the API code downloads.
+        var player;
+        function onYouTubePlayerAPIReady() {
+          player = new YT.Player('ytplayer', {
+            height: '360',
+            width: '640',
+            videoId: 'M7lc1UVf-VE'
+          });
+        }
+      </script></li>
+    </ul>
+  </div>
+  <div data-role="footer" data-position="fixed" data-theme="b">
+    <h4>1905078 박규태 모바일웹</h4>
+  </div>
+</div>
+
+<!--MDK-->
+<div data-role="page" id="page4">
+  <div data-role="header" data-position="fixed" data-theme="b">
+    <a href="#" data-icon="back" data-rel="back" data-direction="reverse">Back</a>
+      <h1>MDK Songs</h1>
+      <a href="#page0" data-icon="home" data-iconpos="notext">Home</a>
+      <div data-role="navbar">
+  			<ul>
+          <li><a href="#page1">Creo</a></li>
+          <li><a href="#page2">Waterflame</a></li>
+          <li><a href="#page3">ParagonX9</a></li>
+          <li><a href="#page4">MDK</a></li>
+          <li><a href="#page5">F-777</a></li>
+  			</ul>
+  		</div>
+  </div>
+  <div data-role="content">
+    <div><h3>내가 좋아하는 MDK 노래들</h3></div><br>
+    <ul data-role="listview">
+      <li data-role="listdivider" id="Title"><h3>Space Invaders</h3></li>
+      <li><p align="middle"><iframe id="ytplayer" type="text/html" width="320" height="240"
+          src="https://www.youtube.com/embed/j8ofcd8SJxo"
+          frameborder="0"></iframe></p>
+
+          <div id="ytplayer"></div>
+
+      <script>
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Replace the 'ytplayer' element with an <iframe> and
+        // YouTube player after the API code downloads.
+        var player;
+        function onYouTubePlayerAPIReady() {
+          player = new YT.Player('ytplayer', {
+            height: '360',
+            width: '640',
+            videoId: 'M7lc1UVf-VE'
+          });
+        }
+      </script></li>
+      <li data-role="listdivider" id="Title"><h3>Press Start</h3></li>
+      <li><p align="middle"><iframe id="ytplayer" type="text/html" width="320" height="240"
+          src="https://www.youtube.com/embed/XoLouT7TqZY"
+          frameborder="0"></iframe>
+
+          <div id="ytplayer"></div></p>
+
+      <script>
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Replace the 'ytplayer' element with an <iframe> and
+        // YouTube player after the API code downloads.
+        var player;
+        function onYouTubePlayerAPIReady() {
+          player = new YT.Player('ytplayer', {
+            height: '360',
+            width: '640',
+            videoId: 'M7lc1UVf-VE'
+          });
+        }
+      </script></li>
+      <li data-role="listdivider" id="Title"><h3>Fingerbang</h3></li>
+      <li><p align="middle"><iframe id="ytplayer" type="text/html" width="320" height="240"
+          src="https://www.youtube.com/embed/BuPmq7yjDnI"
+          frameborder="0"></iframe>
+
+          <div id="ytplayer"></div></p>
+
+      <script>
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Replace the 'ytplayer' element with an <iframe> and
+        // YouTube player after the API code downloads.
+        var player;
+        function onYouTubePlayerAPIReady() {
+          player = new YT.Player('ytplayer', {
+            height: '360',
+            width: '640',
+            videoId: 'M7lc1UVf-VE'
+          });
+        }
+      </script></li>
+    </ul>
+  </div>
+  <div data-role="footer" data-position="fixed" data-theme="b">
+    <h4>1905078 박규태 모바일웹</h4>
+  </div>
+</div>
+
+<!--F-777-->
+<div data-role="page" id="page5">
+  <div data-role="header" data-position="fixed" data-theme="b">
+    <a href="#" data-icon="back" data-rel="back" data-direction="reverse">Back</a>
+      <h1>F-777 Songs</h1>
+      <a href="#page0" data-icon="home" data-iconpos="notext">Home</a>
+      <div data-role="navbar">
+  			<ul>
+          <li><a href="#page1">Creo</a></li>
+          <li><a href="#page2">Waterflame</a></li>
+          <li><a href="#page3">ParagonX9</a></li>
+          <li><a href="#page4">MDK</a></li>
+          <li><a href="#page5">F-777</a></li>
+  			</ul>
+  		</div>
+  </div>
+  <div data-role="content">
+    <div><h3>내가 좋아하는 F-777 노래들</h3></div><br>
+    <ul data-role="listview">
+      <li data-role="listdivider" id="Title"><h3>This isn't Science Rocket(2015 Edition)</h3></li>
+      <li><p align="middle"><iframe id="ytplayer" type="text/html" width="320" height="240"
+          src="https://www.youtube.com/embed/7EF4CxN25vc"
+          frameborder="0"></iframe></p>
+
+          <div id="ytplayer"></div>
+
+      <script>
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Replace the 'ytplayer' element with an <iframe> and
+        // YouTube player after the API code downloads.
+        var player;
+        function onYouTubePlayerAPIReady() {
+          player = new YT.Player('ytplayer', {
+            height: '360',
+            width: '640',
+            videoId: 'M7lc1UVf-VE'
+          });
+        }
+      </script></li>
+      <li data-role="listdivider" id="Title"><h3>Ludicrous Speed</h3></li>
+      <li><p align="middle"><iframe id="ytplayer" type="text/html" width="320" height="240"
+          src="https://www.youtube.com/embed/cLNjP1vkyYU"
+          frameborder="0"></iframe>
+
+          <div id="ytplayer"></div></p>
+
+      <script>
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Replace the 'ytplayer' element with an <iframe> and
+        // YouTube player after the API code downloads.
+        var player;
+        function onYouTubePlayerAPIReady() {
+          player = new YT.Player('ytplayer', {
+            height: '360',
+            width: '640',
+            videoId: 'M7lc1UVf-VE'
+          });
+        }
+      </script></li>
+      <li data-role="listdivider" id="Title"><h3>Airborne Robots</h3></li>
+      <li><p align="middle"><iframe id="ytplayer" type="text/html" width="320" height="240"
+          src="https://www.youtube.com/embed/guBpnPY32s0"
+          frameborder="0"></iframe>
+
+          <div id="ytplayer"></div></p>
+
+      <script>
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Replace the 'ytplayer' element with an <iframe> and
+        // YouTube player after the API code downloads.
+        var player;
+        function onYouTubePlayerAPIReady() {
+          player = new YT.Player('ytplayer', {
+            height: '360',
+            width: '640',
+            videoId: 'M7lc1UVf-VE'
+          });
+        }
+      </script></li>
+    </ul>
+  </div>
+  <div data-role="footer" data-position="fixed" data-theme="b">
+    <h4>1905078 박규태 모바일웹</h4>
+  </div>
+</div>
+</div>
+</body>
+</html>
